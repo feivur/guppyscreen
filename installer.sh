@@ -34,10 +34,10 @@ fi
 printf "${green}=== Installing Guppy Screen === ${white}\n"
 
 # check ld.so version
-if [ ! -f /lib/ld-2.29.so ]; then
-    printf "${red}ld.so is not the expected version. Make sure you're running 1.3.x.y firmware versions ${white}\n"
-    exit 1
-fi
+#if [ ! -f /lib/ld-2.29.so ]; then
+#    printf "${red}ld.so is not the expected version. Make sure you're running 1.3.x.y firmware versions ${white}\n"
+#    exit 1
+#fi
 
 echo "Checking for a working Moonraker"
 MRK_KPY_OK=`curl localhost:7125/server/info 2> /dev/null | jq .result.klippy_connected`
